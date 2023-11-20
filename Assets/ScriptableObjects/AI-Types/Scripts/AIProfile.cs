@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New-AI-Type", menuName ="AI")]
+[CreateAssetMenu(fileName = "New-AI-Type", menuName ="AI-Type")]
 public class AIProfile : ScriptableObject
 {
     public float speed;
