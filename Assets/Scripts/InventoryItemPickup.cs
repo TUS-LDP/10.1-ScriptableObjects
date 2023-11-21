@@ -9,7 +9,7 @@ public class InventoryItemPickup : MonoBehaviour
         if (other.gameObject.tag == "InventoryItem")
         {
             InventoryObject theItemSO = other.gameObject.GetComponent<InventoryItem>().inventoryScriptableObject;
-            GameManager.Instance.inventoryList.Add(theItemSO);
+            GameManager.Instance.AddInventoryItem(theItemSO);
             Destroy(other.gameObject);
         }
     }

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: 
   type: 1
-  UIImage: {fileID: 0}
+  UIImage: {fileID: 1032429426, guid: 2ce72cde60d5c1948b549de0f2c146c5, type: 3}
   description: The axe is really sharp and is usefult for chopping wood.
+  quantity: 0

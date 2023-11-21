@@ -15,4 +15,38 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
+
+    public int AddInventoryItem(InventoryObject itemToAdd)
+    {
+        bool newItem = true;
+        int itemCount = 0;
+
+        for (int i = 0; i < inventoryList.Count; i++)
+        {
+            if (itemToAdd == inventoryList[i])
+            {
+                inventoryList[i].quantity++;
+                itemCount = inventoryList[i].quantity;
+                newItem = false;
+                break;
+            }
+        }
+
+        if (newItem)
+        {
+            itemToAdd.quantity++;
+            itemCount = itemToAdd.quantity;
+            inventoryList.Add(itemToAdd);
+        }
+
+        return itemCount;
+    }
+
+    private void OnDestroy()
+    {
+        for (int i = 0;i < inventoryList.Count;i++)
+        {
+            inventoryList[i].quantity = 0;
+        }
+    }
 }

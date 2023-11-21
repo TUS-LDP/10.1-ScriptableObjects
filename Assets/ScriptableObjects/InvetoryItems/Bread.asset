@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b249c17395155e5469710bdb935f5a1c, type: 3}
   m_Name: Bread
   m_EditorClassIdentifier: 
-  type: 
-  UIImage: {fileID: 0}
+  type: 0
+  UIImage: {fileID: 1845934665, guid: 2ce72cde60d5c1948b549de0f2c146c5, type: 3}
   description: 
+  quantity: 0

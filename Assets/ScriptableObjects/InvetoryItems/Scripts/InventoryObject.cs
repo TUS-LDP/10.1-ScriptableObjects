@@ -16,4 +16,5 @@ public class InventoryObject : ScriptableObject
     public Sprite UIImage;
     [TextArea(15, 20)]
     public string description;
+    public int quantity;
 }
