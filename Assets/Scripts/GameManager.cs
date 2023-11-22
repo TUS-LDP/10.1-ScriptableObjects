@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public List<InventoryObject> inventoryList = new List<InventoryObject>();
+    public InventoryPanelManager inventoryPanelManager;
 
     private void Awake()
     {
@@ -37,7 +38,10 @@ public class GameManager : MonoBehaviour
             itemToAdd.quantity++;
             itemCount = itemToAdd.quantity;
             inventoryList.Add(itemToAdd);
+            inventoryPanelManager.AddItem(itemToAdd);
         }
+
+        inventoryPanelManager.UpdateItems(inventoryList);
 
         return itemCount;
     }
