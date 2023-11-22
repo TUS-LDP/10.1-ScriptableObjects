@@ -17,17 +17,30 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public int AddInventoryItem(InventoryObject itemToAdd)
+    public void AddInventoryItem(InventoryObject itemToAdd)
     {
         bool newItem = true;
-        int itemCount = 0;
 
+        // Loop through the inventory to see if we already have
+        // this item
+
+        /*
         for (int i = 0; i < inventoryList.Count; i++)
         {
             if (itemToAdd == inventoryList[i])
             {
                 inventoryList[i].quantity++;
-                itemCount = inventoryList[i].quantity;
+                newItem = false;
+                break;
+            }
+        }
+        */
+
+        foreach (InventoryObject item in inventoryList)
+        {
+            if (itemToAdd  == item)
+            {
+                item.quantity++;
                 newItem = false;
                 break;
             }
@@ -36,14 +49,12 @@ public class GameManager : MonoBehaviour
         if (newItem)
         {
             itemToAdd.quantity++;
-            itemCount = itemToAdd.quantity;
             inventoryList.Add(itemToAdd);
             inventoryPanelManager.AddItem(itemToAdd);
         }
 
-        inventoryPanelManager.UpdateItems(inventoryList);
+        //inventoryPanelManager.UpdateItems(inventoryList);
 
-        return itemCount;
     }
 
     private void OnDestroy()

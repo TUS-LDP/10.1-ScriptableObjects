@@ -15,7 +15,8 @@ public class InventoryPanelManager : MonoBehaviour
         if (activeItemPanels < inventoryItemPanels.Count)
         {
             inventoryItemPanels[activeItemPanels - 1].SetActive(true);
-            inventoryItemPanels[activeItemPanels - 1].GetComponent<InventoryItemPanelManager>().SetImage(item.UIImage);
+            inventoryItemPanels[activeItemPanels - 1].GetComponent<Image>().sprite = item.UIImage;
+            //inventoryItemPanels[activeItemPanels - 1].GetComponent<InventoryItemPanelManager>().SetImage(item.UIImage);
         }
     }
 
