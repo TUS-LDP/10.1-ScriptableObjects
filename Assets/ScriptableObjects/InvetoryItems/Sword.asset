@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b249c17395155e5469710bdb935f5a1c, type: 3}
+  m_Name: Sword
+  m_EditorClassIdentifier: 
+  type: 1
+  UIImage: {fileID: 1178694652, guid: 2ce72cde60d5c1948b549de0f2c146c5, type: 3}
+  description: Great for dealing damage
+  quantity: 0
