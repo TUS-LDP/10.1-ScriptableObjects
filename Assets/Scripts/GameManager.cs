@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
             inventoryPanelManager.AddItem(itemToAdd);
         }
 
-        //inventoryPanelManager.UpdateItems(inventoryList);
+        inventoryPanelManager.UpdateItems(inventoryList);
 
     }
 
